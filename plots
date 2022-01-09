@@ -1,0 +1,14 @@
+```{r}
+library(ggplot2)
+x <- seq(-4*pi, 4*pi, 0.01)
+y <- sin(x)
+z <- cos(x)
+xyz <- data.frame(x, y, z)
+
+ggplot(xyz, aes(x, y, z)) + 
+  geom_line(aes(y = y, colour = "test2")) +
+  geom_line(aes(y = z, colour = "test1")) +
+  xlab("t") +
+  ylab("x(t)") +
+  labs(colour = "Funktionen")
+```
